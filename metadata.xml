@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+                     xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui"
+                     xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+                     entityID="https://qa-test-idp.example.com/idp/shibboleth">
+  <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">QA Test Identity Provider</mdui:DisplayName>
+        <mdui:Description xml:lang="en">Test SAML metadata for QA validation</mdui:Description>
+      </mdui:UIInfo>
+    </md:Extensions>
+
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>MIIDWjCCAkKgAwIBAgIUIUYOX4SdE8XmZWDb5T3Snl5Bel4wDQYJKoZIhvcNAQELBQAwUzELMAkGA1UEBhMCVVMxIjAgBgNVBAoMGVFBIFRlc3QgSWRlbnRpdHkgUHJvdmlkZXIxIDAeBgNVBAMMF3FhLXRlc3QtaWRwLmV4YW1wbGUuY29tMB4XDTI2MDMyMzExNTgxOVoXDTI3MDMyNDExNTgxOVowUzELMAkGA1UEBhMCVVMxIjAgBgNVBAoMGVFBIFRlc3QgSWRlbnRpdHkgUHJvdmlkZXIxIDAeBgNVBAMMF3FhLXRlc3QtaWRwLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi2mvDWw7NEQIdBQaXo6309tOUza6lVIu6JOPRkVxnU/StcH9/RYkHayb336vAZPFaQfWqup0wG4LBwV44wnRv4t3yTk5VGxXbbIzZpx99FVaS0jUVXtuzGKXcpzW3AiBoCaBxHyCHjCcGnc+7lMClYtkguZcm1u5IXWsJabT/LkcsIZf/5SVd1k9u/F+h6e2jWtFzCWUUm69Mnbn5+NfLDu6JaaSkH6DlXffEq2PEjHYbArPhlgBehJmUkRqKbNFclcUcOhGk+kvcbg6p5fDTXLuZPvqzVMgsL54vpoE+xqPvcr9xSZLWtybWKOk9WPmBKRVuVS4i7WTz5N9u40MlQIDAQABoyYwJDAiBgNVHREEGzAZghdxYS10ZXN0LWlkcC5leGFtcGxlLmNvbTANBgkqhkiG9w0BAQsFAAOCAQEACo2J2WwwXA8fYuEps2g0Qjh4/exz1IqD3/PY9zocd2YiB8Sbwlp9iUY9/d0nWFFATVcfmTEkiOFa6AZRK7jKFr8MhNOS4+n1E7pZBX4CX6viwNIK2QstLHrqPQ43GX3aQ27R96qOCEU/fh4Mlcx41mU6CvMIZNxtxbeNw2md51AN1vEky8Qayy13C8rJIqLQhx6EOPyjrAoCcODI3J4gQpA1lIejM+aZL4WjP5+RPP4eRLpkha1+f7xQoy+5cIO2bnlyDiit6cLc9ZSZ1w7R5UINWOw0r44QqeJ5w7vmF7ZUlUmTZ4jf/Vo+Ss6sdQqBtSXy2Sdo0/Q+nj5KjciYFA==</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+
+    <md:SingleLogoutService
+      Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+      Location="https://qa-test-idp.example.com/idp/profile/SAML2/Redirect/SLO"/>
+
+    <md:SingleSignOnService
+      Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+      Location="https://qa-test-idp.example.com/idp/profile/SAML2/Redirect/SSO"/>
+
+    <md:SingleSignOnService
+      Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+      Location="https://qa-test-idp.example.com/idp/profile/SAML2/POST/SSO"/>
+  </md:IDPSSODescriptor>
+</md:EntityDescriptor>
