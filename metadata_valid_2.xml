@@ -1,15 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
- entityID="https://qa-idp2.example.com/idp">
- <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
-  <md:KeyDescriptor use="signing">
-   <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
-    <ds:X509Data>
-     <ds:X509Certificate>MIIDDjCCAfagAwIBAgIUZnhT605wshhLP8mylQVD7E+9sXMwDQYJKoZIhvcNAQELBQAwQTELMAkGA1UEBhMCVVMxFDASBgNVBAoMC1FBIFRlc3QgSWRQMRwwGgYDVQQDDBNxYS1pZHAyLmV4YW1wbGUuY29tMB4XDTI2MDMyMzE0MDAyN1oXDTI3MDMyNDE0MDAyN1owQTELMAkGA1UEBhMCVVMxFDASBgNVBAoMC1FBIFRlc3QgSWRQMRwwGgYDVQQDDBNxYS1pZHAyLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5XIQGGjDynZFcL8+pcEUNW4PhKTbTaVrunJLu0XrlvfFeavbo7+9+fcxwtAohyobCyT6/uD8u0wmDgQPjkzVpHmKqJhDee5vq58DPjGMYgc1EM203ohh79X/NykVjUnfzMwPDPENEJXb2HPxZTUrOKeEe8f86E3X2uW86T0Zr+jhciNKpinZeY6bX9+MxIceOkaTlZXUxarTOvck6jfqiE4Lbl0chnSX7sSXjoFY4WJjiVczQr+M/jyy+e3TGVB6Wcq3eGxsedY64OKFf3BR6bUee28sw1+BV/bWrQbQaqK0TFaNKQ7LHPS7dgcxgV80qpC9HTkP2VchusP0JtdsLwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBv9SBy0SrVeD8gzODe1E0VZ+Yv96vSVGsmdwr0zob2slIVpXGR4/T1jXkZjfXolDiYsCtd5+m3stDGgkXqxcju/IoWJMzCVvFjHt/56nfAHhPQn1okpVhFXwPzLE5i7DDoi0kcrFDMRUungJ1wOHrUUdrlS6Bxtyak5Ovp6LKgAp/qx6LnXPL4vZ4d/tiJsUU9Ogp/bbE7+Klg2caV2FttN2HdUJg5Yw5/Adzfsnu3FmR1wGykkB6O8EJTCPSE90EgBuG2khw5vV/vXcfasKVo6Lr4s9UQVVwrUqFrl6Q5IlSgdUUXnYaFgugPu59d6/Rx8wlNy9LhF/X3LuGKfsio</ds:X509Certificate>
-    </ds:X509Data>
-   </ds:KeyInfo>
-  </md:KeyDescriptor>
-  <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-   Location="https://qa-idp2.example.com/sso"/>
- </md:IDPSSODescriptor>
+    xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui"
+    xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    entityID="https://shib.qa-idp2.example.com/idp/shibboleth">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:Extensions>
+            <shibmd:Scope regexp="false">qa-idp2.example.com</shibmd:Scope>
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="en">QA Test IdP 2</mdui:DisplayName>
+                <mdui:Description xml:lang="en">Second QA Identity Provider for testing</mdui:Description>
+                <mdui:Logo xml:lang="en" width="80" height="80">https://shib.qa-idp2.example.com/path/to/logo.png</mdui:Logo>
+            </mdui:UIInfo>
+        </md:Extensions>
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDDjCCAfagAwIBAgIUfk9li59WF3Ennx6hnnqwivy0sTkwDQYJKoZIhvcNAQELBQAwQTELMAkG
+A1UEBhMCVVMxFDASBgNVBAoMC1FBIFRlc3QgSWRQMRwwGgYDVQQDDBNxYS1pZHAyLmV4YW1wbGUu
+Y29tMB4XDTI2MDMyMzE0MDAyN1oXDTQ2MDMyMzE0MDAyN1owQTELMAkGA1UEBhMCVVMxFDASBgNV
+BAoMC1FBIFRlc3QgSWRQMRwwGgYDVQQDDBNxYS1pZHAyLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4QDnuSEGvXaIi0TRWt+4oePGWckWm4cBKzjN0e/4xWzpig6i
+ZHDbsrfLqdIZGVN4wD9ty1b2zMJuwgTaLDuiDK/rvvbAjli5oD8rjYMxjVvAGP2TZOtpg8OJlVtC
+dklL2NsFxGWu5bEXG3oAMpnxfgqd1welAQ0gAVqJCa9pvEIAYdXXYqkBp2N8DVU3f+8y68njRPtD
+c/kLlxef/xtIY8wwT9IN3yRzv1RzMTmOAvVl/H4ReVUHrblOycEmfkpSbJMvHJIi13f+0Z1Qo+nn
+JqgLhZaW9UqVqOAjh2xD67JLUtFo32aqfAxNnlEDZtmCFL6mnJ8AMG4e9dR9yCXHTQIDAQABMA0G
+CSqGSIb3DQEBCwUAA4IBAQDCbgTgP9DmWhbVoTt4YTH/o1PAEiw9na54l4PeH9G36gFt2KIwuSLQ
+k0GABn1mpLEvBpjKE3hVNGiqPdDT3/oZuKFXJ9Qx/r4n2Rvqk10cUsYubvkjq4mnUvG2MJt/0TXh
+hiBvADHz8jDqBSJ4GYz7orfgmd5RaFFaEvM7u+q2QtbHaZULEgwjls4ExW2WnzULUsMAP/sXZDa0
+zE3J+vxD10vQeu3WLUoEhKotCpYEUvZSWTcPNuZEAdzBfKPc/XPbJI1BtkA/6BISWT9+6jCxgO9w
+ykchgYQmI8ccnnw19kaRrfQX9A0PIu+K9YMOHvDUfCtuRPxCeaAtkHJxIKOu
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:KeyDescriptor use="encryption">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDDjCCAfagAwIBAgIUfk9li59WF3Ennx6hnnqwivy1sTkwDQYJKoZIhvcNAQELBQAwQTELMAkG
+A1UEBhMCVVMxFDASBgNVBAoMC1FBIFRlc3QgSWRQMRwwGgYDVQQDDBNxYS1pZHAyLmV4YW1wbGUu
+Y29tMB4XDTI2MDMyMzE0MDAyN1oXDTQ2MDMyMzE0MDAyN1owQTELMAkGA1UEBhMCVVMxFDASBgNV
+BAoMC1FBIFRlc3QgSWRQMRwwGgYDVQQDDBNxYS1pZHAyLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3QCmuSEGvXaIi0TRWt+5oePGWckWm4cBKzjN1e/5xWzpig7i
+ZHDbsrfLqdIZGVN5wD9ty1b2zMJuwgTaLDuiDK/rvvbAjli5oD8rjYMxjVvAGP2TZOtpg8OJlVtC
+dklL2NsFxGWu5bEXG3oAMpnxfgqd1welAQ0gAVqJCa9pvEIAYdXXYqkBp2N8DVU3f+8y68njRPtD
+c/kLlxef/xtIY8wwT9IN3yRzv1RzMTmOAvVl/H4ReVUHrblOycEmfkpSbJMvHJIi13f+0Z1Qo+nn
+JqgLhZaW9UqVqOAjh2xD67JLUtFo32aqfAxNnlEDZtmCFL6mnJ8AMG4e9dR9yCXHTQIDAQABMA0G
+CSqGSIb3DQEBCwUAA4IBAQDAbgTgP9DmWhbVoTt4YTH/o1PAEiw9na54l4PeH9G36gFt2KIwuSLQ
+k0GABn1mpLEvBpjKE3hVNGiqPdDT3/oZuKFXJ9Qx/r4n2Rvqk10cUsYubvkjq4mnUvG2MJt/0TXh
+hiBvADHz8jDqBSJ4GYz7orfgmd5RaFFaEvM7u+q2QtbHaZULEgwjls4ExW2WnzULUsMAP/sXZDa0
+zE3J+vxD10vQeu3WLUoEhKotCpYEUvZSWTcPNuZEAdzBfKPc/XPbJI1BtkA/6BISWT9+6jCxgO9w
+ykchgYQmI8ccnnw19kaRrfQX9A0PIu+K9YMOHvDUfCtuRPxCeaAtkHJxIKOu
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+            Location="https://shib.qa-idp2.example.com/idp/profile/SAML2/SOAP/Redirect/SLO"/>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+            Location="https://shib.qa-idp2.example.com/idp/profile/SAML2/POST/SLO"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign"
+            Location="https://shib.qa-idp2.example.com/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+            Location="https://shib.qa-idp2.example.com/idp/profile/SAML2/Redirect/SSO"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+            Location="https://shib.qa-idp2.example.com/idp/profile/SAML2/POST/SSO"/>
+    </md:IDPSSODescriptor>
 </md:EntityDescriptor>
