@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+    xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui"
+    xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    entityID="https://shib.qa-idp3.testorg.com/idp/shibboleth">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:Extensions>
+            <shibmd:Scope regexp="false">qa-idp3.testorg.com</shibmd:Scope>
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="en">QA Test IdP 3</mdui:DisplayName>
+                <mdui:Description xml:lang="en">Third QA Identity Provider for testing</mdui:Description>
+                <mdui:Logo xml:lang="en" width="80" height="80">https://shib.qa-idp3.testorg.com/path/to/logo.png</mdui:Logo>
+            </mdui:UIInfo>
+        </md:Extensions>
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDcTCCAlmgAwIBAgIUBctNkwCxPpbULwVBW+nHAARBOkQwDQYJKoZIhvcNAQELBQAwSDELMAkG
+A1UEBhMCVVMxFjAUBgNVBAoMDVFBIFRlc3QgSWRQIDMxITAfBgNVBAMMGHNoaWIucWEtaWRwMy50
+ZXN0b3JnLmNvbTAeFw0yNjA0MDIwOTI4NDZaFw0yODA0MDEwOTI4NDZaMEgxCzAJBgNVBAYTAlVT
+MRYwFAYDVQQKDA1RQSBUZXN0IElkUCAzMSEwHwYDVQQDDBhzaGliLnFhLWlkcDMudGVzdG9yZy5j
+b20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCrUGhG4FFWloTI4p0yxgcYOnGwpVBP
+sikDO9OkGRZZx+0Le6nffTGE1/kWgQbJ3337soEHJjDHuNIPx4M7XHg/QEJcPRdX6aYF0tXlVJLU
+3zZn3y3c7xXnXi32fD6CpaAJy40MMzUi6DzucYr6a0QaC5NWJyaGYVY2/l0XPu0CB+Km6WO/9kZQ
+FMe+sVkhz7mYUgsn23LiLNvgX2zGsqnTxx33p8Q8z9qCx9do3xrNdlsdPabvGxjsiWbK7rIcwV98
+xseztOMIVNg7z3yoKNgfeNPySW64wooogub2cqOMm0uvXp5FjYcK0cIehl9ZxFaMjpfC5EzyPl1z
+AtbkdSUBAgMBAAGjUzBRMB0GA1UdDgQWBBQQG7zmQPLUZsJvK89bJwPqdF3y4jAfBgNVHSMEGDAW
+gBQQG7zmQPLUZsJvK89bJwPqdF3y4jAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IB
+AQAbnxi311Ah+wXYhPX9ZrN0pKQxD6wxQnOuNkKvidvf2h2F8u7haAs+VZpoxlMmhY0ju7uiIDe
+CoR6GvUTB4/KCa2zcItqieGcch94mg2x97BRO8/D+I40VuKchyB6MxMIgfGVBUzkNItNFJfMn566
+jH9Y/8pemMIFpwIs3X88a93nBIoP3Brq+wHJcmjqE4VOR9/eaY2ON7UB3b61PCDa+oOFHL4SmdX7
+Bt/kkThaVHnt5BlYF51ip4rdy8HfrXr5fXLmR6CuCGVyljJs4f5OUjxPfnvJm65mlgWYoqvMTUD5
+mo107jzO4QCKxQtjtRqETbVADrdgGt7aD63KBm8sa
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:KeyDescriptor use="encryption">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDcTCCAlmgAwIBAgIUQDiHv1SrfOK4AIsXytJouu7fGDUwDQYJKoZIhvcNAQELBQAwSDELMAkG
+A1UEBhMCVVMxFjAUBgNVBAoMDVFBIFRlc3QgSWRQIDMxITAfBgNVBAMMGHNoaWIucWEtaWRwMy50
+ZXN0b3JnLmNvbTAeFw0yNjA0MDIwOTI5MDFaFw0yODA0MDEwOTI5MDFaMEgxCzAJBgNVBAYTAlVT
+MRYwFAYDVQQKDA1RQSBUZXN0IElkUCAzMSEwHwYDVQQDDBhzaGliLnFhLWlkcDMudGVzdG9yZy5j
+b20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDfsjmNC/5b/VOB9Ma37T+x3TvF8OlC
+TZZFFTFkLHqOXFWJ7QVukxiLkEQO2LYB0rHPKS4i98filJ/2+jeIwIKZkBxxr2ke5Ky4tSLMV0X
+dXXUal/UJWlaGr+F8MQx6gP0ixaBFzRsTWgUz1gjrqBCshC1B/8MdybzzV/lI1uyesUhVUPjX2dG
+Z00X+fq7GHBRWoizbzm3Atu+njiYef8BfwXFhX5zevq3ns0dE4scpRkuB/Q2bFZ2NqBr1LV2+yRz
+PrsMzOGRoRpHmu6f57CR+74Ypq2IHm7qUr2GiJQ8EfitjVWWPXoPE/+gf+X3bnL7QaAhj68uCk1S
+STLvSkLqZAgMBAAGjUzBRMB0GA1UdDgQWBBRkZkQgzbE188YhhuwnoSz1QclsZjAfBgNVHSMEGDAW
+gBRkZkQgzbE188YhhuwnoSz1QclsZjAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IB
+AQB2LXtMo2gchmT4sfU82Kqst3dyn/r8I1t9C4jHLK0sVe2FSQ3CKRSdFGglI+UPzm0Y/pjU63Gy
+gcqH51cV/sbMPCNkjl5AUVNaPbu4N/K5OSmRlO7tMl3a4QTCmIXEluBnK+etpT95BbAl72ws1Z/a
+xIRVmv6jKEddaHGNZPXPyI1Zh76S4vkAlW4EPuzeMeUbQ8LU5BlLwRsOQISCa9NKp2gdAZqAALAD
+JHN9NeZKJ7IsfKkdvJY67RZhYdYYBlRLfDXJgcidVmObRSQmAzbQ3CedP/ZYShWEKaG03aaGIUt4
+uiZ0r1aDXSbLh8qcXpXmeQADoVQ0jkbqpYDDAYGG
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+            Location="https://shib.qa-idp3.testorg.com/idp/profile/SAML2/SOAP/Redirect/SLO"/>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+            Location="https://shib.qa-idp3.testorg.com/idp/profile/SAML2/POST/SLO"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign"
+            Location="https://shib.qa-idp3.testorg.com/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+            Location="https://shib.qa-idp3.testorg.com/idp/profile/SAML2/Redirect/SSO"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+            Location="https://shib.qa-idp3.testorg.com/idp/profile/SAML2/POST/SSO"/>
+    </md:IDPSSODescriptor>
+</md:EntityDescriptor>
