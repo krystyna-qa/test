@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor
+    xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+    xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui"
+    xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    entityID="https://shib.qa-idp4.testorg.com/idp/shibboleth">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:Extensions>
+            <shibmd:Scope regexp="false">qa-idp4.testorg.com</shibmd:Scope>
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="en">QA Test IdP 4</mdui:DisplayName>
+                <mdui:Description xml:lang="en">Fourth QA Identity Provider for testing</mdui:Description>
+                <mdui:Logo xml:lang="en" width="80" height="80">https://shib.qa-idp4.testorg.com/path/to/logo.png</mdui:Logo>
+            </mdui:UIInfo>
+        </md:Extensions>
+
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDcTCCAlmgAwIBAgIUQATESTIDP4SIGNINGCERTONLYQAUSEwDQYJKoZIhvcNAQELBQAwSDEL
+MAkGA1UEBhMCVVMxFjAUBgNVBAoMDVFBIFRlc3QgSWRQIDQxITAfBgNVBAMMGHNoaWIucWEtaWRw
+NC50ZXN0b3JnLmNvbTAeFw0yNjA1MDgwMDAwMDBaFw0yODA1MDgwMDAwMDBaMEgxCzAJBgNVBAYT
+AlVTMRYwFAYDVQQKDA1RQSBUZXN0IElkUCA0MSEwHwYDVQQDDBhzaGliLnFhLWlkcDQudGVzdG9y
+Zy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCxEXAMPLEDATANOTFORPRODUC
+TIONUSEONLYQAIDP4SIGNINGCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTION
+USEONLYQAIDP4SIGNINGCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTIONUSEO
+NLYQAIDP4SIGNINGCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTIONUSEONLYQ
+AIDP4SIGNINGCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTIONUSEONLYQAIDP
+4SIGNINGCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTIONUSEONLYQAIDP4SIG
+NINGCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTIONUSEONLYQAIDP4SIGNING
+CERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTIONUSEONLYQAIDP4SIGNINGCERT
+IFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTIONUSEONLYQAIDP4SIGNINGCERTIFIC
+ATEPLACEHOLDERDATAIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQATESTIDP4SIGNINGCERTONLYQA
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+
+        <md:KeyDescriptor use="encryption">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDcTCCAlmgAwIBAgIUQATESTIDP4ENCRYPTIONCERTONLYQAUSEwDQYJKoZIhvcNAQELBQAwSD
+ELMAkGA1UEBhMCVVMxFjAUBgNVBAoMDVFBIFRlc3QgSWRQIDQxITAfBgNVBAMMGHNoaWIucWEtaW
+RwNC50ZXN0b3JnLmNvbTAeFw0yNjA1MDgwMDAwMDBaFw0yODA1MDgwMDAwMDBaMEgxCzAJBgNVBA
+YTAlVTMRYwFAYDVQQKDA1RQSBUZXN0IElkUCA0MSEwHwYDVQQDDBhzaGliLnFhLWlkcDQudGVzdG
+9yZy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCxEXAMPLEDATANOTFORPROD
+UCTIONUSEONLYQAIDP4ENCRYPTIONCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODU
+CTIONUSEONLYQAIDP4ENCRYPTIONCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUC
+TIONUSEONLYQAIDP4ENCRYPTIONCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCT
+IONUSEONLYQAIDP4ENCRYPTIONCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTI
+ONUSEONLYQAIDP4ENCRYPTIONCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTIO
+NUSEONLYQAIDP4ENCRYPTIONCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTION
+USEONLYQAIDP4ENCRYPTIONCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTIONU
+SEONLYQAIDP4ENCRYPTIONCERTIFICATEPLACEHOLDERDATAEXAMPLEDATANOTFORPRODUCTIONUS
+EONLYQAIDP4ENCRYPTIONCERTIFICATEPLACEHOLDERDATAIDAQABMA0GCSqGSIb3DQEBCwUAA4I
+BAQATESTIDP4ENCRYPTIONCERTONLYQA
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+
+        <md:SingleLogoutService
+            Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+            Location="https://shib.qa-idp4.testorg.com/idp/profile/SAML2/SOAP/Redirect/SLO"/>
+        <md:SingleLogoutService
+            Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+            Location="https://shib.qa-idp4.testorg.com/idp/profile/SAML2/POST/SLO"/>
+        <md:SingleSignOnService
+            Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign"
+            Location="https://shib.qa-idp4.testorg.com/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+        <md:SingleSignOnService
+            Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+            Location="https://shib.qa-idp4.testorg.com/idp/profile/SAML2/Redirect/SSO"/>
+        <md:SingleSignOnService
+            Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+            Location="https://shib.qa-idp4.testorg.com/idp/profile/SAML2/POST/SSO"/>
+    </md:IDPSSODescriptor>
+</md:EntityDescriptor>
