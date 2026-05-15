@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor
+    xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+    xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui"
+    xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    entityID="https://shib.qa-idp5.testorg.com/idp/shibboleth">
+
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <md:Extensions>
+            <shibmd:Scope regexp="false">qa-idp5.testorg.com</shibmd:Scope>
+
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="en">QA Test IdP 5</mdui:DisplayName>
+                <mdui:Description xml:lang="en">
+                    QA SAML Identity Provider 5 for testing purposes
+                </mdui:Description>
+                <mdui:Logo xml:lang="en" width="80" height="80">
+                    https://shib.qa-idp5.testorg.com/logo.png
+                </mdui:Logo>
+            </mdui:UIInfo>
+        </md:Extensions>
+
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIUAjvchb5ISlEEoEXRa5yrkHODvUwwDQYJKoZIhvcNAQELBQAwSDELMAkGA1UEBhMCVVMxFjAUBgNVBAoMDVFBIFRlc3QgSWRQIDUxITAfBgNVBAMMGHNoaWIucWEtaWRwNS50ZXN0b3JnLmNvbTAeFw0yNjA1MTUxMDE1MDNaFw0yNzA1MTUxMDE1MDNaMEgxCzAJBgNVBAYTAlVTMRYwFAYDVQQKDA1RQSBUZXN0IElkUCA1MSEwHwYDVQQDDBhzaGliLnFhLWlkcDUudGVzdG9yZy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCucx7v9lXXBcpS2xvGwYjjBMFiOcsH4jUXroC69Oo2KTrjSPP9Cx7szmVP0GctodA0pOHmV2VQRLxERSXGqbqhcbxYDV1HiDe7Njxs9niiFdgAMkUJuLqU3Yvaf1MvN0Ado50WZHK34LgdGXP5diHOk7aITb0qL2GxxPP8PRZwhMbNvETAjUkLLqZ+MDBdcJZtrch22vo8nIkXTtrt+tCWejN+XYPvkHjTHXY/raGoz3apniI12Kkbmn53wN6VOFWM8175PNuzj14qk3JVQEgnwoAMSDpkbvXoHaet73oSZEG7/dYW8hG0L3jJ1Ui4HYOMUFloKzVMPnVRgZgzgt7lAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAItd++ehqWrMKEmRECiXIQLYuR8QQ3+L+TTXWv0OaOJ3bIVdP+Gx/sUYimwPjL3GWuiXuOfZZe1D3d+JdBFQos0mEntFK0xLur/CNO7LjvdEeXYLVkgErnw5cNPEAXTDuJvmYAXwJXV8VD2Gezg+hpT3oPV+rLcs+7k18U1dXXYVu2+3nlEUcAMEPpgqjYmcCkA1OZrcoBOfDedSCmM15qfJhk8ZAN1F5wTY7qbclKfvWrvZIaQe5NzowjjNkHAUwrJucIo6E/uFeKFGRz0gZK3qbndfoVRVFq25dvuBY2+iQVDiU+EmMg3VY5KI0ODyjz5F4NnCLTX35urwQ52Df2w=
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+
+        <md:SingleSignOnService
+            Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+            Location="https://shib.qa-idp5.testorg.com/idp/profile/SAML2/Redirect/SSO"/>
+
+        <md:SingleSignOnService
+            Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+            Location="https://shib.qa-idp5.testorg.com/idp/profile/SAML2/POST/SSO"/>
+
+    </md:IDPSSODescriptor>
+
+</md:EntityDescriptor>
